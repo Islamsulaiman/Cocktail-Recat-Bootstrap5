@@ -1,5 +1,6 @@
 import React from "react";
 
+import Navbar from "./components/navbar";
 import Home from "./pages/home";
 import About from "./pages/about";
 import Error from "./pages/error";
@@ -10,6 +11,7 @@ function App() {
   return (
     <>
       <Router>
+        <Navbar />
         <Switch>
           <Route path='/' exact component={Home} />
           <Route path='/about' component={About} />
