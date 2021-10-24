@@ -1,9 +1,5 @@
-import './App.css';
-
 function App() {
-  return (
-
-  );
+  return <button className='btn btn-primary'>Click me</button>;
 }
 
 export default App;
