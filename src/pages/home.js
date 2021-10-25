@@ -6,7 +6,7 @@ import CocktailList from "../components/cocktailList";
 const Home = () => {
   return (
     <>
-      <div className='d-flex justify-content-center '>
+      <div className='d-inline-flex justify-content-center '>
         <Search />
         <CocktailList />
       </div>
