@@ -2,7 +2,7 @@ import React from "react";
 import { useGlobal } from "../context";
 
 const Search = () => {
-  let { loading } = useGlobal();
+  let { loading, setSearchTerm } = useGlobal();
   return (
     <>
       <div className='card w-50 text-center m-5 shadow'>
