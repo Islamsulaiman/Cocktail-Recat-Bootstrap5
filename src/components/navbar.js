@@ -6,7 +6,7 @@ const Navbar = () => {
     <>
       <nav class='navbar navbar-light bg-light navbar-expand-lg p-6 border-bottom border-3 shadow mb-5'>
         <div class='container'>
-          <a href='#' class='navbar-brand'>
+          <Link to='/' class='navbar-brand'>
             <svg
               width='170'
               height='20'
@@ -23,7 +23,7 @@ const Navbar = () => {
                 fill='#476A2E'
               />
             </svg>
-          </a>
+          </Link>
           <button
             type='button'
             class='navbar-toggler'
