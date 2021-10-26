@@ -60,7 +60,7 @@ const AppProvider = ({ children }) => {
   }, [url, fetchData]);
 
   return (
-    <AppContext.Provider value={{ loading, searchTerm, setSearchTerm }}>
+    <AppContext.Provider value={{ loading, searchTerm, setSearchTerm, data }}>
       {children}
     </AppContext.Provider>
   );
