@@ -1,9 +1,18 @@
 import React from "react";
+import Cocktail from "./cocktail";
+import { useGlobal } from "../context";
 
 const CocktailList = () => {
+  let { data } = useGlobal();
   return (
     <>
-      <h2 className='fw-bold mt-3 mb-4'>C o c k t a i l s</h2>
+      <div className='row'>
+        <div className='col-12 col-md-6  '>
+          {data.map((item) => {
+            return <Cocktail {...item} />;
+          })}
+        </div>
+      </div>
     </>
   );
 };

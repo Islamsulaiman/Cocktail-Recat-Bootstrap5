@@ -43,7 +43,6 @@ const AppProvider = ({ children }) => {
             ingredient: strIngredient,
           };
         });
-        console.log(newCoc);
         setData(newCoc);
       } else {
         setData([]);
