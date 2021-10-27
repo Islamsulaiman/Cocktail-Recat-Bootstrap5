@@ -18,7 +18,7 @@ const Cocktail = ({ id, name, alcohol, glass, img, ingredient }) => {
           </div>
           <p className='fw-bold mb-2'>{glass}</p>
           <p className='fw-lighter text-muted mt-0 mb-1'>{alcohol}</p>
-          <Link to='/' className='btn btn-success mt-0 p-1 py-0'>
+          <Link to={`/kabab/${id}`} className='btn btn-success mt-0 p-1 py-0'>
             D E T A I L S
           </Link>
         </div>
