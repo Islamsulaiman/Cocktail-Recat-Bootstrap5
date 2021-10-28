@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { useGlobal } from "../context";
 
 const Search = () => {
   let { loading, setSearchTerm, searchTerm, data } = useGlobal();
+
+  let reference = useRef();
+
+  useEffect(() => {
+    reference.current.focus();
+  }, []);
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -21,6 +27,7 @@ const Search = () => {
                 Search Your Favorite Cocktail
               </label>
               <input
+                ref={reference}
                 type='text'
                 class='form-control'
                 placeholder='Search for ...'
