@@ -2,7 +2,12 @@ import React from "react";
 import { useGlobal } from "../context";
 
 const Search = () => {
-  let { loading, setSearchTerm } = useGlobal();
+  let { loading, setSearchTerm, searchTerm, data } = useGlobal();
+
+  const handleChange = (e) => {
+    e.preventDefault();
+    setSearchTerm(e.target.value);
+  };
   return (
     <>
       <div className='card w-50 text-center m-5 shadow'>
@@ -20,6 +25,9 @@ const Search = () => {
                 class='form-control'
                 placeholder='Search for ...'
                 id='inputText'
+                onChange={(e) => {
+                  handleChange(e);
+                }}
               />
             </div>
           </form>
