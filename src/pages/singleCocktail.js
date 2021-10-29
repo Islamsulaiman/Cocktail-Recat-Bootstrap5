@@ -63,7 +63,7 @@ const SingleCocktail = () => {
   }, [id, fetchData]);
 
   return (
-    <main>
+    <main className='container'>
       {data.length < 1
         ? "No match"
         : data.map((item) => {
@@ -72,35 +72,76 @@ const SingleCocktail = () => {
             const color = { backgroundColor: "green", color: "white" };
             return (
               <React.Fragment key={id}>
-                <Link to='/' className='btn'>
-                  Back Home
-                </Link>
-                <h3>{name}</h3>
-                <div>
-                  <section>
-                    <img style={width} src={img} alt={name} />
-                  </section>
-                  <section>
-                    <p>
-                      <span style={color}>Name :</span> {name}
-                    </p>
-                    <p>
-                      <span style={color}>Alcohol :</span> {alcohol}
-                    </p>
-                    <p>
-                      <span style={color}>Glass :</span> {glass}
-                    </p>
-                    <p>
-                      <span style={color}>Ingredient :</span>
-                      {ingredient.map((item) => {
-                        return item ? (
-                          <span style={{ margin: "10px" }} key={id++}>
-                            {item}
-                          </span>
-                        ) : null;
-                      })}
-                    </p>
-                  </section>
+                <div className='d-flex justify-content-center'>
+                  <div>
+                    <div className='mb-4'>
+                      <Link to='/' className='btn btn-success px-3 lead'>
+                        B a c k H o m e
+                      </Link>
+                    </div>
+                    <div className='mt-4'>
+                      <h2 className='mt-0 fw-bold position-relative top-50 start-50 translate-middle text-center'>
+                        {name}
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+
+                <div className='row mt-5'>
+                  <div className='col-12 col-lg-4 mb-5'>
+                    <img
+                      style={width}
+                      src={img}
+                      alt={name}
+                      className='rounded'
+                    />
+                  </div>
+                  <div className='col-12 col-lg-8 d-flex align-items-center'>
+                    <div>
+                      <p className='fw-bold'>
+                        <span
+                          className='px-2 py-1 rounded me-2 fw-bold'
+                          style={color}
+                        >
+                          Name :
+                        </span>
+                        {name}
+                      </p>
+                      <p className='fw-bold'>
+                        <span
+                          className='px-2 py-1 rounded me-2 fw-bold'
+                          style={color}
+                        >
+                          Alcohol :{" "}
+                        </span>{" "}
+                        {alcohol}
+                      </p>
+                      <p className='fw-bold'>
+                        <span
+                          className='px-2 py-1 rounded me-2 fw-bold'
+                          style={color}
+                        >
+                          Glass :{" "}
+                        </span>{" "}
+                        {glass}
+                      </p>
+                      <p className='fw-bold'>
+                        <span
+                          className='px-2 py-1 rounded me-2 fw-bold'
+                          style={color}
+                        >
+                          Ingredient :{" "}
+                        </span>
+                        {ingredient.map((item) => {
+                          return item ? (
+                            <span style={{ margin: "10px" }} key={id++}>
+                              {item}
+                            </span>
+                          ) : null;
+                        })}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </React.Fragment>
             );
