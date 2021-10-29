@@ -74,29 +74,29 @@ const SingleCocktail = () => {
               <React.Fragment key={id}>
                 <div className='d-flex justify-content-center'>
                   <div>
-                    <div className='mb-4'>
+                    <div className='mb-5'>
                       <Link to='/' className='btn btn-success px-3 lead'>
                         B a c k H o m e
                       </Link>
                     </div>
-                    <div className='mt-4'>
-                      <h2 className='mt-0 fw-bold position-relative top-50 start-50 translate-middle text-center'>
+                    <div className='mt-5'>
+                      <h3 className='mt-0 fw-bold position-relative top-50 start-50 translate-middle text-center'>
                         {name}
-                      </h2>
+                      </h3>
                     </div>
                   </div>
                 </div>
 
-                <div className='row mt-5'>
-                  <div className='col-12 col-lg-4 mb-5'>
+                <div className='row mt-4'>
+                  <div className='col-12 col-lg-5 mb-5 ms-0 p-0'>
                     <img
                       style={width}
                       src={img}
                       alt={name}
-                      className='rounded'
+                      className='rounded position-relative translate-middle top-50 start-50'
                     />
                   </div>
-                  <div className='col-12 col-lg-8 d-flex align-items-center'>
+                  <div className='col-12 col-lg-7 d-flex align-items-center me-0 p-0'>
                     <div>
                       <p className='fw-bold'>
                         <span

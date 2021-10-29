@@ -3,7 +3,6 @@ import { useGlobal } from "../context";
 import { Link } from "react-router-dom";
 
 const Cocktail = ({ id, name, alcohol, glass, img, ingredient }) => {
-  let { data } = useGlobal();
   return (
     <>
       <div class='card mb-5 shadow-lg'>
@@ -17,7 +16,10 @@ const Cocktail = ({ id, name, alcohol, glass, img, ingredient }) => {
             <h3 className='fw-bold'>{name}</h3>
           </div>
           <p className='fw-bold mb-2'>{glass}</p>
-          <p className='fw-lighter text-muted mt-0 mb-1'>{alcohol}</p>
+          {alcohol === "Alcoholic" ? null : (
+            <p className='fw-lighter text-muted mt-0 mb-1'>{alcohol}</p>
+          )}
+
           <Link to={`/kabab/${id}`} className='btn btn-success mt-0 p-1 py-0'>
             D E T A I L S
           </Link>
