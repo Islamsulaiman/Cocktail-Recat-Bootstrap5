@@ -7,11 +7,9 @@ const CocktailList = () => {
   return (
     <>
       <div className='row'>
-        <div className='col-12 col-md-6  '>
-          {data.map((item) => {
-            return <Cocktail {...item} />;
-          })}
-        </div>
+        {data.map((item) => {
+          return <Cocktail {...item} />;
+        })}
       </div>
     </>
   );
