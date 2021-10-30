@@ -1,5 +1,5 @@
 import React from "react";
-import { useRef, useEffect, useContext, useState, useCallback } from "react";
+import { useEffect, useContext, useState, useCallback } from "react";
 
 const url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
 
@@ -37,8 +37,6 @@ const AppProvider = ({ children }) => {
           };
         });
         setData(newCoc);
-        console.log(searchTerm);
-        console.log(newCoc);
       } else {
         setData([]);
       }
@@ -46,7 +44,7 @@ const AppProvider = ({ children }) => {
     } catch (error) {
       console.log(error);
     }
-  }, [url, searchTerm]);
+  }, [searchTerm]);
 
   useEffect(() => {
     fetchData();

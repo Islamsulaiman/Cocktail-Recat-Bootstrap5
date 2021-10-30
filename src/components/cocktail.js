@@ -1,18 +1,17 @@
 import React from "react";
-import { useGlobal } from "../context";
 import { Link } from "react-router-dom";
 
-const Cocktail = ({ id, name, alcohol, glass, img, ingredient }) => {
+const Cocktail = ({ id, name, alcohol, glass, img }) => {
   return (
     <>
       <div className='col-12 col-md-6 col-lg-4'>
-        <div class='card mb-5 shadow-lg'>
+        <div className='card mb-5 shadow-lg'>
           <img
             src={img}
-            alt='Drink image'
-            class='card-img-top bg-image hover-zoom'
+            alt='Drink'
+            className='card-img-top bg-image hover-zoom'
           />
-          <div class='card-body'>
+          <div className='card-body'>
             <div>
               <h3 className='fw-bold'>{name}</h3>
             </div>
