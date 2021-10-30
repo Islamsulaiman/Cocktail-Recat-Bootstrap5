@@ -56,7 +56,7 @@ const SingleCocktail = () => {
       setData([]);
       setLoading(false);
     }
-  }, [url, id]);
+  }, [id]);
 
   useEffect(() => {
     fetchData();

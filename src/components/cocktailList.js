@@ -8,7 +8,7 @@ const CocktailList = () => {
     <>
       <div className='row'>
         {data.map((item) => {
-          return <Cocktail {...item} />;
+          return <Cocktail key={item.id} {...item} />;
         })}
       </div>
     </>

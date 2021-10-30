@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <>
-      <nav class='navbar navbar-light bg-light navbar-expand-lg p-6 border-bottom border-3 shadow mb-5'>
-        <div class='container'>
-          <Link to='/' class='navbar-brand'>
+      <nav className='navbar navbar-light bg-light navbar-expand-sm p-6 border-bottom border-3 shadow mb-5'>
+        <div className='container-fluid'>
+          <Link to='/' className='navbar-brand'>
             <svg
               width='170'
               height='20'
@@ -26,33 +26,33 @@ const Navbar = () => {
           </Link>
           <button
             type='button'
-            class='navbar-toggler'
+            className='navbar-toggler'
             data-bs-toggle='collapse'
             data-bs-target='#navbarResponsiveRight'
             aria-controls='navbarResponsiveRight'
             aria-expanded='false'
             aria-label='Toggle navigation'
           >
-            <span class='navbar-toggler-icon'></span>
+            <span className='navbar-toggler-icon'></span>
           </button>
           <div
-            class='collapse navbar-collapse d-flex justify-content-end'
+            className='collapse navbar-collapse justify-content-end'
             id='navbarResponsiveRight'
           >
-            <ul class='navbar-nav'>
-              <li class='nav-item'>
+            <ul className='navbar-nav'>
+              <li className='nav-item'>
                 <Link
                   to='/'
-                  class='nav-link active h5 text-muted'
+                  className='nav-link active h5 text-muted'
                   aria-current='page'
                 >
                   Home
                 </Link>
               </li>
-              <li class='nav-item'>
+              <li className='nav-item'>
                 <Link
                   to='/about'
-                  class='nav-link h5 text-muted'
+                  className='nav-link h5 text-muted'
                   aria-current='page'
                 >
                   About
