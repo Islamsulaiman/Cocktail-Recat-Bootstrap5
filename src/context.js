@@ -18,24 +18,31 @@ const AppProvider = ({ children }) => {
 
       let { drinks } = resJson;
       if (drinks) {
-        let newCoc = drinks.map((item) => {
-          let {
-            idDrink,
-            strDrink,
-            strAlcoholic,
-            strGlass,
-            strDrinkThumb,
-            strIngredient,
-          } = item;
-          return {
-            id: idDrink,
-            name: strDrink,
-            alcohol: strAlcoholic,
-            glass: strGlass,
-            img: strDrinkThumb,
-            ingredient: strIngredient,
-          };
-        });
+        let newCoc = drinks
+          .filter((item) => {
+            if (item.strAlcoholic === "Alcoholic") {
+              return false; // skip alcoholic drinks
+            }
+            return true;
+          })
+          .map((item) => {
+            let {
+              idDrink,
+              strDrink,
+              strAlcoholic,
+              strGlass,
+              strDrinkThumb,
+              strIngredient,
+            } = item;
+            return {
+              id: idDrink,
+              name: strDrink,
+              alcohol: strAlcoholic,
+              glass: strGlass,
+              img: strDrinkThumb,
+              ingredient: strIngredient,
+            };
+          });
         setData(newCoc);
       } else {
         setData([]);

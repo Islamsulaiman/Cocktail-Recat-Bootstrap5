@@ -18,4 +18,4 @@ Its a web application to fetch cocktails from an external API, and search throug
 1. Make sure to have all the previous technologies mentioned.
 2. Clone the Repo.
 3. Run "npm install" to install all the needed packages and modules.
-4. Run "npm start" to start the live server of the project
+4. Run "npm start" to start the live server of the project.
